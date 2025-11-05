@@ -132,7 +132,6 @@ http://localhost:3000
 | POST | `/api/auth/register` | Register a new user | No |
 | POST | `/api/auth/login` | Login and receive JWT tokens | No |
 | POST | `/api/auth/logout` | Logout and clear tokens | No |
-| PUT | `/api/auth/update-password` | Update user password | Yes |
 
 ### Event Endpoints
 
@@ -150,7 +149,7 @@ http://localhost:3000
 | GET | `/api/swappable-slots` | Get all swappable slots from other users | Yes |
 | POST | `/api/swap-request` | Create a swap request | Yes |
 | POST | `/api/swap-response/:requestCode` | Accept/reject a swap request | Yes |
-| GET | `/api/pending-swap-requests` | Get all pending swap requests | Yes |
+| GET | `/api/swap-requests` | Get all pending swap requests | Yes |
 
 ---
 
