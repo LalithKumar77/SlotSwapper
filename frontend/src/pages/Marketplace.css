@@ -1,0 +1,237 @@
+.marketplace-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.marketplace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.marketplace-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.marketplace-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.slot-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 2px solid transparent;
+}
+
+.slot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+}
+
+.slot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.slot-header h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+.duration-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.slot-owner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.owner-icon {
+  font-size: 1.25rem;
+}
+
+.owner-name {
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slot-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.time-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.time-icon {
+  font-size: 1.25rem;
+  margin-top: 0.125rem;
+}
+
+.time-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.time-label {
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.time-value {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slot-description {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #667eea;
+}
+
+.slot-actions {
+  margin-top: 1.5rem;
+}
+
+/* Marketplace specific button styles */
+.marketplace-container .btn-block {
+  width: 100%;
+}
+
+.marketplace-container .btn-secondary {
+  background: #6c757d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.marketplace-container .btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.marketplace-container .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.marketplace-container .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state p {
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .marketplace-container {
+    padding: 1rem;
+  }
+
+  .marketplace-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .marketplace-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .slots-grid {
+    grid-template-columns: 1fr;
+  }
+}

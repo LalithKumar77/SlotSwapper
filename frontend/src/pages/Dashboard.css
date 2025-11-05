@@ -1,0 +1,281 @@
+/* Dashboard Styles */
+.dashboard-container {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 40px 20px;
+}
+
+.dashboard-header {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 36px;
+  color: #333;
+  margin: 0;
+  font-weight: 700;
+}
+
+.dashboard-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 8px 0 0 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 100px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.empty-state {
+  max-width: 500px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 60px 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 32px 0;
+}
+
+.events-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.event-header h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+  flex: 1;
+  font-weight: 600;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.status-busy {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-swappable {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-pending {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.event-time {
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.time-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.time-icon {
+  font-size: 20px;
+}
+
+.time-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.time-label {
+  font-weight: 600;
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.time-value {
+  color: #333;
+  font-size: 14px;
+}
+
+.event-description {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* Dashboard specific button styles */
+.dashboard-container .btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dashboard-container .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dashboard-container .btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.dashboard-container .btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+.dashboard-container .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.dashboard-container .btn-secondary:hover:not(:disabled) {
+  background-color: #5a6268;
+}
+
+.dashboard-container .btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.dashboard-container .btn-success:hover:not(:disabled) {
+  background-color: #218838;
+}
+
+.dashboard-container .btn-warning {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.dashboard-container .btn-warning:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.dashboard-container .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.dashboard-container .btn-danger:hover:not(:disabled) {
+  background-color: #c82333;
+}
+
+.dashboard-container .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-state {
+    padding: 40px 24px;
+  }
+
+  .event-actions {
+    flex-direction: column;
+  }
+
+  .event-actions button {
+    width: 100%;
+  }
+}
